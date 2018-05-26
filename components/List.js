@@ -24,7 +24,7 @@ class List extends Component {
     }
 
     alertItemName = (item) => {
-        alert("El nombre es: ", item.name);
+        alert("El nombre es: " + item.name);
     }
 
     render(){

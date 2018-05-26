@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import PresentationalComponent from './PresentationalComponent';
 import List from './List';
+import Login from "./Login";
 // class Home extends Component{
 //     state=  {
 //         myState: 'This is my state'
@@ -23,7 +24,7 @@ import List from './List';
 
 const Home = () => {
     return (
-        <List/>
+        <Login/>
     )
 }
 export default Home;
