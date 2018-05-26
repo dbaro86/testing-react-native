@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
-
+import PresentationalComponent from './PresentationalComponent';
 class Home extends Component{
     state=  {
         myState: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, \
@@ -12,17 +12,14 @@ class Home extends Component{
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui \
             officia deserunt mollit anim id est laborum.'
-
     }
 
-    updateState = () => this.setState({myState: 'New State'})
+    updateState = () => this.setState({myState: 'The state is updated'})
 
     render(){
         return (
             <View>
-                <Text onPress={this.updateState}>
-                    {this.state.myState}
-                </Text>
+                <PresentationalComponent myState = {this.state.myState} updateState= {this.updateState}/>
             </View>
         )
     }
