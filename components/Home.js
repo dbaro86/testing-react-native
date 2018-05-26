@@ -1,25 +1,31 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import PresentationalComponent from './PresentationalComponent';
-class Home extends Component{
-    state=  {
-        myState: 'This is my state'
-    }
+import List from './List';
+// class Home extends Component{
+//     state=  {
+//         myState: 'This is my state'
+//     }
 
-    updateState = () => this.setState({myState: 'The state is updated'})
+//     updateState = () => this.setState({myState: 'The state is updated'})
 
-    render(){
-        return (
-            <View style = {styles.container}>
-                <View style = {styles.redbox} />
-                <View style = {styles.bluebox} />
-                <View style = {styles.blackbox} />
-            </View>
+//     render(){
+//         return (
+//             <View style = {styles.container}>
+//                 <View style = {styles.redbox} />
+//                 <View style = {styles.bluebox} />
+//                 <View style = {styles.blackbox} />
+//             </View>
 
-        )
-    }
+//         )
+//     }
+// }
+
+const Home = () => {
+    return (
+        <List/>
+    )
 }
-
 export default Home;
 
 const styles = StyleSheet.create({
