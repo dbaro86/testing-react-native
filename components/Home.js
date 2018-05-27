@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import PresentationalComponent from './PresentationalComponent';
-import List from './List';
-import Login from "./Login";
+import ScrollViewExample from "./ScrollViewExample";
+// import PresentationalComponent from './PresentationalComponent';
+// import Login from "./Login";
+// import List from './List';
 // class Home extends Component{
 //     state=  {
 //         myState: 'This is my state'
@@ -24,7 +25,7 @@ import Login from "./Login";
 
 const Home = () => {
     return (
-        <Login/>
+        <ScrollViewExample/>
     )
 }
 export default Home;
