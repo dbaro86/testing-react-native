@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity, TextInput, StyleSheet, ScrollView} from 'react-native'
+import {View, Text, TouchableOpacity, TextInput, StyleSheet, ScrollView, Image} from 'react-native'
 
 
-class ScrollViewExample extends Component {
+class ListPersonsView extends Component {
     state = {
         names: [
             {'name': 'Ben', 'id': 1},
@@ -29,29 +29,35 @@ class ScrollViewExample extends Component {
     }
 
     render(){
-        return (<View>
-            <ScrollView>
-                {
-                    this.state.names.map((item, index) =>(
-                        <View key={item.id} style={styles.item}>
-                            <Text>{item.name}</Text>
-                        </View>
-                    ))
-                }
-            </ScrollView>
-        </View>
+        return (
+            <View>
+                <ScrollView>
+                    {
+                        this.state.names.map((item, index) =>(
+                            <View key={item.id} style={styles.item}>
+                              <Image
+                                  style = {{ width: 60, height: 60 }}
+                                  source={require('../assets/img/icon.png')}/>
+                                <Text>{item.name}</Text>
+                            </View>
+                        ))
+                    }
+                </ScrollView>
+            </View>
         )
     }
 }
 
-export  default ScrollViewExample
+export  default ListPersonsView
 
 const styles = StyleSheet.create({
     item: {
+        borderRadius: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: 30,
+        borderColor:'#dddddd',
         margin: 2,
         borderColor: '#2a4944',
         borderWidth: 1,
